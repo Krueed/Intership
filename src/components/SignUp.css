@@ -1,0 +1,8 @@
+.SignUp{
+    background-image: url("./img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    height: 100vh;
+    padding: 2% 0% 0% 0%;
+}

@@ -9,26 +9,21 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import './SignUp.css'
 const theme = createTheme();
 
  function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
   return (
+    <div className='SignUp'
+    >
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
+    
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 20,
+            marginTop: 6,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -39,7 +34,7 @@ const theme = createTheme();
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate  sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -118,10 +113,12 @@ const theme = createTheme();
                 </Link>
               </Grid>
             </Grid>
+           
           </Box>
         </Box>
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
 export default SignUp;
